@@ -9,5 +9,4 @@
         <size android:height="5dp"
             android:width="10dp"/>
     </stroke>
-    <solid android:color="#FFFFFF"/>
 </shape>
