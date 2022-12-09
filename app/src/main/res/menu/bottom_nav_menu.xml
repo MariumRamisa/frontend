@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/dashboard"
+        android:icon="@drawable/ic_dashboard"
+        android:title="Dashboard"/>
+
+    <item
+        android:id="@+id/diary"
+        android:icon="@drawable/ic_notes_diary"
+        android:title="Diary"/>
+    <item
+        android:id="@+id/search"
+        android:icon="@drawable/ic_search"
+        android:title="search"
+        app:showAsAction="ifRoom|collapseActionView"
+        app:actionViewClass="androidx.appcompat.widget.SearchView"/>
+
+    <item
+        android:id="@+id/profile"
+        android:icon="@drawable/ic_person"
+        android:title="Profile"/>
+
+    <item
+        android:id="@+id/plans"
+        android:icon="@drawable/ic_plans"
+        android:title="Plans"/>
+
+</menu>
