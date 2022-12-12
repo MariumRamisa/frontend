@@ -1,4 +1,4 @@
-package com.example.my_app;
+package com.example.my_app.my_app.Activity;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -10,7 +10,8 @@ import android.widget.ArrayAdapter;
 import android.widget.ImageView;
 import android.widget.Spinner;
 import android.widget.TextView;
-import android.widget.Toast;
+
+import com.example.my_app.R;
 
 public class question_3 extends AppCompatActivity implements AdapterView.OnItemSelectedListener{
 
@@ -27,13 +28,13 @@ public class question_3 extends AppCompatActivity implements AdapterView.OnItemS
         arrow.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                startActivity(new Intent(getApplicationContext(),question_2.class));
+                startActivity(new Intent(getApplicationContext(), question_2.class));
             }
         });
         next.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                startActivity(new Intent(getApplicationContext(),question_4.class));
+                startActivity(new Intent(getApplicationContext(), question_4.class));
             }
         });
 

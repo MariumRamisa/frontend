@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/background"
-    tools:context=".question_1">
+    tools:context=".my_app.Activity.question_1">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/toolbar_layout"
@@ -19,7 +19,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="150dp"
-            android:text="Goals"
+            android:text="Goal"
             android:textAlignment="center"
             android:textColor="@color/white"
             android:textSize="20sp"
@@ -41,6 +41,16 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             app:srcCompat="@drawable/ic_backarrow" />
+
+        <ImageView
+            android:id="@+id/next_arrow"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="138dp"
+            app:layout_constraintBottom_toBottomOf="@+id/profile"
+            app:layout_constraintStart_toEndOf="@+id/profile"
+            app:layout_constraintTop_toTopOf="@+id/profile"
+            app:srcCompat="@drawable/ic_next" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 
     <androidx.constraintlayout.widget.ConstraintLayout

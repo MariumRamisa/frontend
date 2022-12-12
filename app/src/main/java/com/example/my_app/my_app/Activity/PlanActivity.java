@@ -1,4 +1,4 @@
-package com.example.my_app;
+package com.example.my_app.my_app.Activity;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
@@ -7,6 +7,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.MenuItem;
 
+import com.example.my_app.R;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 public class PlanActivity extends AppCompatActivity {
@@ -23,17 +24,17 @@ public class PlanActivity extends AppCompatActivity {
             public boolean onNavigationItemSelected(@NonNull MenuItem item) {
                 switch (item.getItemId()){
                     case R.id.dashboard:
-                        startActivity(new Intent(getApplicationContext(),MainActivity.class));
+                        startActivity(new Intent(getApplicationContext(), MainActivity.class));
                         overridePendingTransition(0,0);
                         return true;
 
                     case R.id.diary:
-                        startActivity(new Intent(getApplicationContext(),DiaryActivity.class));
+                        startActivity(new Intent(getApplicationContext(), DiaryActivity.class));
                         overridePendingTransition(0,0);
                         return true;
 
                     case R.id.profile:
-                        startActivity(new Intent(getApplicationContext(),ProfileActivity.class));
+                        startActivity(new Intent(getApplicationContext(), ProfileActivity.class));
                         overridePendingTransition(0,0);
                         return true;
 

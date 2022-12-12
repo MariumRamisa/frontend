@@ -1,4 +1,4 @@
-package com.example.my_app;
+package com.example.my_app.my_app.Activity;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -7,6 +7,8 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
+
+import com.example.my_app.R;
 
 public class question_2 extends AppCompatActivity {
 
@@ -24,14 +26,14 @@ public class question_2 extends AppCompatActivity {
         arrow.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                startActivity(new Intent(getApplicationContext(),question_1.class));
+                startActivity(new Intent(getApplicationContext(), question_1.class));
             }
         });
 
         not.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                startActivity(new Intent(getApplicationContext(),question_3.class));
+                startActivity(new Intent(getApplicationContext(), question_3.class));
             }
         });
         lightly.setOnClickListener(new View.OnClickListener() {

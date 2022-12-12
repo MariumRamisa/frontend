@@ -1,4 +1,4 @@
-package com.example.my_app;
+package com.example.my_app.my_app.Activity;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -7,11 +7,11 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
-import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.Spinner;
-import android.widget.TextView;
 import android.widget.Toast;
+
+import com.example.my_app.R;
 
 public class Goal_edit extends AppCompatActivity implements AdapterView.OnItemSelectedListener {
 
@@ -55,7 +55,7 @@ public class Goal_edit extends AppCompatActivity implements AdapterView.OnItemSe
         back_arrow.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(getApplicationContext(),ProfileActivity.class));
+                startActivity(new Intent(getApplicationContext(), ProfileActivity.class));
             }
         });
 

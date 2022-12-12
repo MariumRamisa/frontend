@@ -1,9 +1,7 @@
-package com.example.my_app;
+package com.example.my_app.my_app.Activity;
 
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.appcompat.widget.SearchView;
 
-import android.content.ClipData;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
@@ -15,10 +13,9 @@ import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.google.android.material.textfield.TextInputLayout;
-
-import java.util.ArrayList;
-import java.util.List;
+import com.example.my_app.R;
+import com.example.my_app.my_app.Activity.Goal_edit;
+import com.example.my_app.my_app.Activity.MainActivity;
 
 public class ProfileActivity extends AppCompatActivity implements AdapterView.OnItemSelectedListener{
 
@@ -58,14 +55,14 @@ public class ProfileActivity extends AppCompatActivity implements AdapterView.On
         back_arrow.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(getApplicationContext(),MainActivity.class));
+                startActivity(new Intent(getApplicationContext(), MainActivity.class));
             }
         });
 
         goal.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(getApplicationContext(),Goal_edit.class));
+                startActivity(new Intent(getApplicationContext(), Goal_edit.class));
             }
         });
 
