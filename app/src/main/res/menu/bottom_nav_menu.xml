@@ -11,13 +11,13 @@
         android:id="@+id/diary"
         android:icon="@drawable/ic_notes_diary"
         android:title="Diary"/>
-    <item
+    <!--<item
         android:id="@+id/search"
         android:icon="@drawable/ic_search"
         android:title="search"
         app:showAsAction="ifRoom|collapseActionView"
         app:actionViewClass="androidx.appcompat.widget.SearchView"/>
-
+-->
     <item
         android:id="@+id/profile"
         android:icon="@drawable/ic_person"

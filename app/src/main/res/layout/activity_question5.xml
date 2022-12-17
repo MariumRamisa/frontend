@@ -13,6 +13,7 @@
         android:layout_height="50dp"
         android:background="@color/background"
         >
+
         <TextView
             android:id="@+id/profile"
             android:layout_width="wrap_content"
@@ -20,7 +21,7 @@
             android:layout_marginStart="150dp"
             android:text="Goal"
             android:textAlignment="center"
-            android:textColor="@color/white"
+            android:textColor="@color/text_view"
             android:textSize="20sp"
             app:layout_anchor="@+id/toolbar_layout"
             app:layout_anchorGravity="center"
@@ -69,7 +70,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="104dp"
             android:text="How much kg you want to lose weekly  ?"
-            android:textColor="@color/white"
+            android:textColor="@color/text_view"
             android:textSize="20sp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.498"
@@ -94,7 +95,6 @@
             tools:textAlignment="center" />
 
 
-
         <TextView
             android:id="@+id/textView5"
             android:layout_width="wrap_content"
@@ -102,7 +102,7 @@
             android:layout_marginTop="60dp"
             android:text="5/5"
             android:textAlignment="center"
-            android:textColor="@color/white"
+            android:textColor="@color/text_view"
             android:textSize="20sp"
             app:layout_constraintEnd_toEndOf="@+id/spinner_weekly_goal"
             app:layout_constraintHorizontal_bias="0.501"

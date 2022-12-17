@@ -87,7 +87,7 @@
                     android:paddingTop="3dp"
                     android:paddingBottom="3dp"
                     android:text="Starting Weight"
-                    android:textColor="@color/white"
+                    android:textColor="@color/text_view"
                     android:textSize="20sp" />
 
                 <Spinner
@@ -120,7 +120,7 @@
                     android:paddingTop="3dp"
                     android:paddingBottom="3dp"
                     android:text="Current Weight"
-                    android:textColor="@color/white"
+                    android:textColor="@color/text_view"
                     android:textSize="20sp" />
 
                 <Spinner
@@ -153,7 +153,7 @@
                     android:paddingTop="3dp"
                     android:paddingBottom="3dp"
                     android:text="Goal Weight"
-                    android:textColor="@color/white"
+                    android:textColor="@color/text_view"
                     android:textSize="20sp" />
 
                 <Spinner
@@ -186,7 +186,7 @@
                     android:paddingTop="3dp"
                     android:paddingBottom="3dp"
                     android:text="Weekly Goal"
-                    android:textColor="@color/white"
+                    android:textColor="@color/text_view"
                     android:textSize="20sp" />
 
 
@@ -220,7 +220,7 @@
                     android:paddingTop="3dp"
                     android:paddingBottom="3dp"
                     android:text="Activity_level"
-                    android:textColor="@color/white"
+                    android:textColor="@color/text_view"
                     android:textSize="20sp" />
 
                 <Spinner

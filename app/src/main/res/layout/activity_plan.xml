@@ -22,7 +22,7 @@
             android:layout_marginStart="150dp"
             android:text="Plan"
             android:textAlignment="center"
-            android:textColor="@color/white"
+            android:textColor="@color/text_view"
             android:textSize="20sp"
             app:layout_anchor="@+id/toolbar_layout"
             app:layout_anchorGravity="center"
@@ -184,7 +184,7 @@
                 android:layout_weight="1"
                 android:text="Find a Plan"
                 android:textSize="30dp"
-                android:textColor="@color/white"
+                android:textColor="@color/text_view"
                 android:textStyle="bold" />
 
             <TextView
@@ -193,7 +193,7 @@
                 android:layout_height="wrap_content"
                 android:text="Meal plans,workout plans and more.Start a plan, follow along, and reach your goal."
                 android:textSize="20dp"
-                android:textColor="@color/white"/>
+                android:textColor="@color/text_view"/>
 
 
         </LinearLayout>
@@ -225,7 +225,7 @@
             android:layout_marginBottom="8dp"
             android:layout_weight="1"
             android:text="Filter by:"
-            android:textColor="@color/white"
+            android:textColor="@color/text_view"
             android:textSize="25dp"
             android:textStyle="bold"
             app:layout_constraintBottom_toTopOf="@+id/scroll"

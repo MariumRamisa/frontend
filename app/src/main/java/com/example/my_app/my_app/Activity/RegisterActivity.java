@@ -4,8 +4,6 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.os.PatternMatcher;
-import android.util.Log;
 import android.util.Patterns;
 import android.view.View;
 import android.widget.Button;
@@ -14,7 +12,6 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.my_app.R;
-import com.example.my_app.my_app.Api;
 import com.example.my_app.my_app.Model.Register;
 import com.example.my_app.my_app.RetrofitClient;
 
@@ -97,14 +94,14 @@ public class RegisterActivity extends AppCompatActivity {
                     return;
                 }
 
-
-               Call<Register> callRegister = RetrofitClient.getInstance().getApi().register(userName,userEmail,userPassword);
-                callRegister.enqueue((new Callback<Register>() {
+               Register registerUser=new Register(userName,userEmail,userPassword,userPassword2);
+               Call<ResponseBody> callRegister = RetrofitClient.getInstance().getApi().register(registerUser);
+                callRegister.enqueue((new Callback<ResponseBody>() {
                     @Override
-                    public void onResponse(Call<Register> call, Response<Register> response) {
-                        Register registerResponse =response.body();
+                    public void onResponse(Call<ResponseBody> call, Response<ResponseBody> response) {
+                        ResponseBody registerResponse =response.body();
                        if(response.isSuccessful()){
-                           Toast.makeText(RegisterActivity.this, registerResponse.getMessage(), Toast.LENGTH_SHORT).show();
+                           Toast.makeText(RegisterActivity.this, "Registration Successfully", Toast.LENGTH_SHORT).show();
                            startActivity(new Intent(getApplicationContext(), question_1.class));
                        }
                        else {
@@ -113,7 +110,7 @@ public class RegisterActivity extends AppCompatActivity {
                     }
 
                     @Override
-                    public void onFailure(Call<Register> call, Throwable t) {
+                    public void onFailure(Call<ResponseBody> call, Throwable t) {
                         Toast.makeText(RegisterActivity.this, "t.getMessage()", Toast.LENGTH_SHORT).show();
                     }
 

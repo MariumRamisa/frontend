@@ -8,15 +8,21 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.ProgressBar;
 
 import com.example.my_app.R;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.android.material.imageview.ShapeableImageView;
 
+import java.util.Timer;
+import java.util.TimerTask;
+
 
 public class MainActivity extends AppCompatActivity  {
 
 
+    ProgressBar pb;
+    int counter=0;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -67,9 +73,25 @@ public class MainActivity extends AppCompatActivity  {
             }
         });
 
-
+        prog();
 
     }
-
+ // steps progressbar
+     public void prog()
+     {
+         pb=findViewById(R.id.steps_progressBar);
+         final Timer t =new Timer();
+         TimerTask tt = new TimerTask() {
+             @Override
+             public void run() {
+                 counter++;
+                 pb.setProgress((counter));
+                 if(counter==100){
+                     t.cancel();
+                 }
+             }
+         };
+         t.schedule(tt,0,100);
+     }
 
 }

@@ -32,7 +32,7 @@
             android:layout_marginStart="150dp"
             android:text="Profile"
             android:textAlignment="center"
-            android:textColor="@color/white"
+            android:textColor="@color/text_view"
             android:textSize="20sp"
             app:layout_anchor="@+id/toolbar_layout"
             app:layout_anchorGravity="center"
@@ -113,7 +113,7 @@
                     android:paddingTop="3dp"
                     android:paddingBottom="3dp"
                     android:text="User Name"
-                    android:textColor="@color/white"
+                    android:textColor="@color/text_view"
                     android:textSize="22sp" />
 
                 <EditText
@@ -128,7 +128,7 @@
                     android:paddingBottom="3dp"
                     android:text="Ramisa"
                     android:textAlignment="textEnd"
-                    android:textColor="@color/blue"
+                    android:textColor="@color/edit_text"
                     android:textSize="22sp"
                     tools:ignore="TouchTargetSizeCheck" />
 
@@ -149,7 +149,7 @@
                     android:paddingTop="3dp"
                     android:paddingBottom="3dp"
                     android:text="Email"
-                    android:textColor="@color/white"
+                    android:textColor="@color/text_view"
                     android:textSize="22sp" />
 
                 <EditText
@@ -164,7 +164,7 @@
                     android:paddingBottom="3dp"
                     android:text="ramisa.2468@gmail.com"
                     android:textAlignment="textEnd"
-                    android:textColor="@color/blue"
+                    android:textColor="@color/edit_text"
                     android:textSize="22sp"
                     tools:ignore="TouchTargetSizeCheck" />
 
@@ -185,7 +185,7 @@
                     android:paddingTop="3dp"
                     android:paddingBottom="3dp"
                     android:text="Height"
-                    android:textColor="@color/white"
+                    android:textColor="@color/text_view"
                     android:textSize="23sp" />
 
                 <Spinner
@@ -222,7 +222,7 @@
                     android:paddingTop="3dp"
                     android:paddingBottom="3dp"
                     android:text="Gender"
-                    android:textColor="@color/white"
+                    android:textColor="@color/text_view"
                     android:textSize="23sp" />
 
 
@@ -260,7 +260,7 @@
                     android:paddingTop="3dp"
                     android:paddingBottom="3dp"
                     android:text="Age"
-                    android:textColor="@color/white"
+                    android:textColor="@color/text_view"
                     android:textSize="23sp" />
 
                 <Spinner
@@ -299,7 +299,7 @@
                     android:paddingTop="3dp"
                     android:paddingBottom="3dp"
                     android:text="Location"
-                    android:textColor="@color/white"
+                    android:textColor="@color/text_view"
                     android:textSize="23sp" />
 
                 <Spinner
@@ -336,7 +336,7 @@
                     android:paddingTop="3dp"
                     android:paddingBottom="3dp"
                     android:text="Goal"
-                    android:textColor="@color/white"
+                    android:textColor="@color/text_view"
                     android:textSize="22sp" />
 
 

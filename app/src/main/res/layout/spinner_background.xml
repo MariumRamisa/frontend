@@ -2,7 +2,7 @@
 <CheckedTextView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:textColor="@color/blue"
+    android:textColor="@color/edit_text"
     android:textSize="22.8sp"
     android:textAlignment="textEnd"
     android:background="@color/box"
