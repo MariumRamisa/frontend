@@ -29,8 +29,7 @@ public class MainActivity extends AppCompatActivity  {
     TextView txtview_foodcalorie;
     TextView txtview_exercisecalorie;
     TextView text_cal;
-    SearchView searchView;
-
+    //SearchView searchView;
     ProgressBar pb;
     int counter=0;
 
@@ -45,9 +44,8 @@ public class MainActivity extends AppCompatActivity  {
         txtview_foodcalorie=findViewById(R.id.txtview_foodcalorie);
         txtview_exercisecalorie=findViewById(R.id.txtview_exercisecalorie);
         text_cal=findViewById(R.id.text_cal);
-
-        searchView=findViewById(R.id.search_view);
-        searchView.clearFocus();
+        /*searchView=findViewById(R.id.search_view);
+        searchView.clearFocus();*/
 
         BottomNavigationView navigationView=findViewById(R.id.bottomNavigationView);
         navigationView.setSelectedItemId(R.id.dashboard);

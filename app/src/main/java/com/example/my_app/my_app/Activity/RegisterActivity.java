@@ -83,6 +83,11 @@ public class RegisterActivity extends AppCompatActivity {
                     password.setError("Please enter your password");
                     return;
                 }
+                if (userPassword2.isEmpty()){
+                    password.requestFocus();
+                    password.setError("Please enter your password");
+                    return;
+                }
                 if (userPassword.length()<8){
                     password.requestFocus();
                     password.setError("Password must be minimum 8 characters");
@@ -90,7 +95,7 @@ public class RegisterActivity extends AppCompatActivity {
                 }
                 if (!userPassword2.equals(password)) {
                     password2.requestFocus();
-                    password2.setError("Password must be minimum 8 characters");
+                    password2.setError("Password doesnt match");
                     return;
                 }
 

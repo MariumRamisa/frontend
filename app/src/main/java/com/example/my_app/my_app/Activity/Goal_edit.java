@@ -69,7 +69,7 @@ public class Goal_edit extends AppCompatActivity implements AdapterView.OnItemSe
 
     @Override
     public void onItemSelected(AdapterView<?> adapterView, View view, int position, long id) {
-        Toast.makeText(this, "item selected", Toast.LENGTH_SHORT).show();
+      //  Toast.makeText(this, "item selected", Toast.LENGTH_SHORT).show();
     }
 
     @Override

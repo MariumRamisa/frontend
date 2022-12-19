@@ -66,6 +66,12 @@ public class ProfileActivity extends AppCompatActivity implements AdapterView.On
                 startActivity(new Intent(getApplicationContext(), MainActivity.class));
             }
         });
+        save_btn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(getApplicationContext(), MainActivity.class));
+            }
+        });
 
         goal.setOnClickListener(new View.OnClickListener() {
             @Override

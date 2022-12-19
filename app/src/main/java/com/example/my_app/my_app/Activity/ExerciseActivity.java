@@ -44,11 +44,11 @@ public class ExerciseActivity extends AppCompatActivity implements AdapterView.O
             }
         });
 
-        ArrayAdapter exercise_name_adapter=ArrayAdapter.createFromResource(this,R.array.exercise,R.layout.spinner_background_2);
+        ArrayAdapter exercise_name_adapter=ArrayAdapter.createFromResource(this,R.array.exercise,R.layout.spinner_background);
         exercise_name.setAdapter(exercise_name_adapter);
         exercise_name.setOnItemSelectedListener(this);
 
-        ArrayAdapter exercise_quantity_adapter=ArrayAdapter.createFromResource(this,R.array.number,R.layout.spinner_background_2);
+        ArrayAdapter exercise_quantity_adapter=ArrayAdapter.createFromResource(this,R.array.number,R.layout.spinner_background);
         exercise_quantity.setAdapter(exercise_quantity_adapter);
         exercise_quantity.setOnItemSelectedListener(this);
 
