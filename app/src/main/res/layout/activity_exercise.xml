@@ -1,9 +1,190 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".my_app.Activity.ExerciseActivity">
+    android:background="@color/background"
+    tools:context=".my_app.Activity.ExerciseActivity"
+    tools:visibility="visible">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/toolbar_layout"
+        android:layout_width="match_parent"
+        android:layout_height="69dp"
+        android:layout_marginBottom="681dp"
+        android:background="@color/box"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0">
+
+        <ImageView
+            android:id="@+id/save"
+            android:layout_width="wrap_content"
+            android:layout_height="24dp"
+            android:layout_marginStart="51dp"
+            android:layout_marginEnd="27dp"
+            app:layout_constraintBottom_toBottomOf="@+id/profile"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/profile"
+            app:layout_constraintTop_toTopOf="@+id/profile"
+            app:srcCompat="@drawable/ic_check" />
+
+        <TextView
+            android:id="@+id/profile"
+            android:layout_width="206dp"
+            android:layout_height="35dp"
+            android:layout_marginStart="60dp"
+            android:text="Exercise"
+            android:textAlignment="center"
+            android:textColor="@color/text_view"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@+id/arrow"
+            app:layout_constraintStart_toEndOf="@+id/arrow"
+            app:layout_constraintTop_toTopOf="@+id/arrow" />
+
+        <ImageView
+            android:id="@+id/arrow"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginEnd="50dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/profile"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/ic_backarrow" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/below_constrain"
+        android:layout_width="match_parent"
+        android:layout_height="519dp"
+        android:layout_below="@+id/top_constrain"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="false"
+        android:layout_alignParentBottom="false"
+        android:layout_marginTop="80dp"
+        android:layout_marginBottom="4dp"
+        android:background="@color/box"
+        app:layout_constraintEnd_toStartOf="@id/bottomAppBar"
+        app:layout_constraintStart_toEndOf="@+id/toolbar_layout">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+
+            android:id="@+id/constrain1"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/background"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <LinearLayout
+                android:id="@+id/layout1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="5dp"
+                android:layout_marginEnd="5dp"
+                android:background="@color/box"
+                android:orientation="vertical"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="193dp"
+                    android:layout_weight="1">
+
+                    <TextView
+                        android:id="@+id/exercise_name_txt"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="16dp"
+                        android:layout_marginTop="16dp"
+                        android:layout_weight="1"
+                        android:background="@color/box"
+                        android:paddingLeft="10dp"
+                        android:paddingTop="3dp"
+                        android:paddingBottom="3dp"
+                        android:text="Exercise"
+                        android:textColor="@color/text_view"
+                        android:textSize="20sp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <Spinner
+                        android:id="@+id/spinner_exercise_name"
+                        android:layout_width="95dp"
+                        android:layout_height="36dp"
+                        android:layout_marginEnd="10dp"
+                        android:background="@drawable/rectangle_shape"
+                        android:entries="@array/exercise"
+                        android:minHeight="48dp"
+                        android:textAlignment="center"
+                        app:layout_constraintBottom_toBottomOf="@+id/exercise_name_txt"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.907"
+                        app:layout_constraintStart_toEndOf="@+id/exercise_name_txt"
+                        app:layout_constraintTop_toTopOf="@+id/exercise_name_txt"
+                        app:layout_constraintVertical_bias="0.0"
+                        tools:ignore="TouchTargetSizeCheck" />
+
+
+
+
+                    <TextView
+                        android:id="@+id/amount_txt"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="28dp"
+                        android:layout_weight="1"
+                        android:background="@color/box"
+                        android:paddingLeft="10dp"
+                        android:paddingTop="3dp"
+                        android:paddingBottom="3dp"
+                        android:text="Amount"
+                        android:textColor="@color/text_view"
+                        android:textSize="20sp"
+                        app:layout_constraintEnd_toEndOf="@+id/exercise_name_txt"
+                        app:layout_constraintHorizontal_bias="0.0"
+                        app:layout_constraintStart_toStartOf="@+id/exercise_name_txt"
+                        app:layout_constraintTop_toBottomOf="@+id/exercise_name_txt" />
+
+                    <Spinner
+                        android:id="@+id/spinner_amount"
+                        android:layout_width="95dp"
+                        android:layout_height="36dp"
+                        android:background="@drawable/rectangle_shape"
+                        android:entries="@array/number"
+                        android:minHeight="48dp"
+                        android:textAlignment="center"
+                        android:textColor="@color/white"
+                        app:layout_constraintBottom_toBottomOf="@+id/amount_txt"
+                        app:layout_constraintEnd_toEndOf="@+id/spinner_exercise_name"
+                        app:layout_constraintStart_toStartOf="@+id/spinner_exercise_name"
+                        app:layout_constraintTop_toTopOf="@+id/amount_txt"
+                        app:layout_constraintVertical_bias="1.0" />
+
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+            </LinearLayout>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

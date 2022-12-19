@@ -19,35 +19,43 @@ import com.example.my_app.my_app.Activity.MainActivity;
 
 public class ProfileActivity extends AppCompatActivity implements AdapterView.OnItemSelectedListener{
 
-
+    ImageView back_arrow;
+    ImageView save_btn;
+    TextView goal;
+    EditText username;
+    EditText email;
+    Spinner height;
+    Spinner age;
+    Spinner location;
+    Spinner gender;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_profile);
 
-        ImageView back_arrow=findViewById(R.id.arrow);
-        ImageView save_btn=findViewById(R.id.save);
-        TextView goal=findViewById(R.id.Goal);
-        EditText username=findViewById(R.id.username_edit);
-        EditText email=findViewById(R.id.email_edit);
+        back_arrow=findViewById(R.id.arrow);
+        save_btn=findViewById(R.id.save);
+        goal=findViewById(R.id.Goal);
+        username=findViewById(R.id.username_edit);
+        email=findViewById(R.id.email_edit);
 
-        Spinner height=findViewById(R.id.height_edit);
+        height=findViewById(R.id.height_edit);
         ArrayAdapter height_adapter=ArrayAdapter.createFromResource(this,R.array.height,R.layout.spinner_background);
         height.setAdapter(height_adapter);
         height.setOnItemSelectedListener(this);
 
-        Spinner age=findViewById(R.id.age_edit);
+        age=findViewById(R.id.age_edit);
         ArrayAdapter age_adapter=ArrayAdapter.createFromResource(this,R.array.age,R.layout.spinner_background);
         age.setAdapter(age_adapter);
         age.setOnItemSelectedListener(this);
 
-        Spinner location=findViewById(R.id.location_edit);
+        location=findViewById(R.id.location_edit);
         ArrayAdapter location_adapter=ArrayAdapter.createFromResource(this,R.array.location,R.layout.spinner_background);
         location.setAdapter(location_adapter);
         location.setOnItemSelectedListener(this);
 
-        Spinner gender=findViewById(R.id.gender_edit);
+        gender=findViewById(R.id.gender_edit);
         ArrayAdapter gender_adapter=ArrayAdapter.createFromResource(this,R.array.gender,R.layout.spinner_background);
         gender.setAdapter(height_adapter);
         gender.setOnItemSelectedListener(this);
@@ -72,7 +80,7 @@ public class ProfileActivity extends AppCompatActivity implements AdapterView.On
 
     @Override
     public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
-        Toast.makeText(this, "hii", Toast.LENGTH_SHORT).show();
+       // Toast.makeText(this, "item selected", Toast.LENGTH_SHORT).show();
     }
 
     @Override

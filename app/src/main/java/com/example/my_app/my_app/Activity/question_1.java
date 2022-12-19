@@ -12,15 +12,22 @@ import com.example.my_app.R;
 
 public class question_1 extends AppCompatActivity {
 
+    ImageView arrow;
+    ImageView next;
+    TextView lose;
+    TextView maintain;
+    TextView gain;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_question1);
 
-        ImageView arrow=findViewById(R.id.arrow);
-        TextView lose=findViewById(R.id.txt_lose);
-        TextView maintain=findViewById(R.id.txt_maintain);
-        TextView gain=findViewById(R.id.txt_gain);
+        arrow=findViewById(R.id.arrow);
+        next =findViewById(R.id.next_arrow);
+        lose=findViewById(R.id.txt_lose);
+        maintain=findViewById(R.id.txt_maintain);
+        gain=findViewById(R.id.txt_gain);
 
         arrow.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -29,22 +36,29 @@ public class question_1 extends AppCompatActivity {
             }
         });
 
-        lose.setOnClickListener(new View.OnClickListener() {
+        next.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 startActivity(new Intent(getApplicationContext(), question_2.class));
             }
         });
+
+        lose.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+            }
+        });
         maintain.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                startActivity(new Intent(getApplicationContext(),question_2.class));
+
             }
         });
         gain.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                startActivity(new Intent(getApplicationContext(),question_2.class));
+
             }
         });
     }

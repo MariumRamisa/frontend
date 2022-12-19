@@ -10,20 +10,29 @@ import android.widget.ArrayAdapter;
 import android.widget.ImageView;
 import android.widget.Spinner;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.example.my_app.R;
 
 public class question_3 extends AppCompatActivity implements AdapterView.OnItemSelectedListener{
 
+    ImageView arrow;
+    ImageView next;
+    TextView male;
+    TextView female;
+    Spinner age;
+    Spinner location;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_question3);
 
-        ImageView arrow=findViewById(R.id.arrow);
-        ImageView next=findViewById(R.id.next_arrow);
-        TextView male=findViewById(R.id.txt_male);
-        TextView female=findViewById(R.id.txt_female);
+        arrow=findViewById(R.id.arrow);
+        next=findViewById(R.id.next_arrow);
+        male=findViewById(R.id.txt_male);
+        female=findViewById(R.id.txt_female);
+        age=findViewById(R.id.spinner_age);
+        location=findViewById(R.id.spinner_location);
 
         arrow.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -51,12 +60,11 @@ public class question_3 extends AppCompatActivity implements AdapterView.OnItemS
             }
         });
 
-        Spinner age=findViewById(R.id.spinner_age);
+
         ArrayAdapter age_adapter=ArrayAdapter.createFromResource(this,R.array.age,R.layout.spinner_background_2);
         age.setAdapter(age_adapter);
         age.setOnItemSelectedListener(this);
 
-        Spinner location=findViewById(R.id.spinner_location);
         ArrayAdapter location_adapter=ArrayAdapter.createFromResource(this,R.array.location,R.layout.spinner_background_2);
         location.setAdapter(location_adapter);
         location.setOnItemSelectedListener(this);
@@ -65,7 +73,7 @@ public class question_3 extends AppCompatActivity implements AdapterView.OnItemS
 
     @Override
     public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
-
+        Toast.makeText(this, "item selected", Toast.LENGTH_SHORT).show();
     }
 
     @Override

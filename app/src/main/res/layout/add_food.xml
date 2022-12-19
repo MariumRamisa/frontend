@@ -64,43 +64,14 @@
 
 
     <androidx.constraintlayout.widget.ConstraintLayout
-        android:id="@+id/top_constrain"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="0dp"
-        android:layout_marginTop="80dp"
-        android:background="@color/box">
-
-
-        <TextView
-            android:id="@+id/foodname_txtview"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="20dp"
-            android:layout_marginTop="10dp"
-            android:layout_marginEnd="181dp"
-            android:layout_marginBottom="10dp"
-            android:fontFamily="sans-serif-medium"
-            android:text="White Rice Cooked"
-            android:textAlignment="center"
-            android:textColor="@color/text_view"
-            android:textSize="25sp"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
-
-    </androidx.constraintlayout.widget.ConstraintLayout>
-
-    <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/below_constrain"
         android:layout_width="match_parent"
-        android:layout_height="519dp"
+        android:layout_height="match_parent"
         android:layout_below="@+id/top_constrain"
         android:layout_alignParentStart="true"
         android:layout_alignParentEnd="false"
         android:layout_alignParentBottom="false"
-        android:layout_marginTop="150dp"
+        android:layout_marginTop="80dp"
         android:layout_marginBottom="4dp"
         android:background="@color/box"
         app:layout_constraintEnd_toStartOf="@id/bottomAppBar"
@@ -132,11 +103,11 @@
 
                 <androidx.constraintlayout.widget.ConstraintLayout
                     android:layout_width="match_parent"
-                    android:layout_height="193dp"
+                    android:layout_height="match_parent"
                     android:layout_weight="1">
 
                     <TextView
-                        android:id="@+id/serving_size"
+                        android:id="@+id/food_name"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginStart="16dp"
@@ -146,29 +117,61 @@
                         android:paddingLeft="10dp"
                         android:paddingTop="3dp"
                         android:paddingBottom="3dp"
-                        android:text="Serving Size(Cups)"
+                        android:text="Food Name"
                         android:textColor="@color/text_view"
                         android:textSize="20sp"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toTopOf="parent" />
 
                     <Spinner
-                        android:id="@+id/spinner_serving_size"
+                        android:id="@+id/spinner_food_name"
                         android:layout_width="95dp"
                         android:layout_height="36dp"
-                        android:layout_marginEnd="10dp"
+                        android:layout_marginStart="147dp"
+                        android:layout_marginEnd="30dp"
+                        android:background="@drawable/rectangle_shape"
+                        android:entries="@array/food"
+                        android:minHeight="48dp"
+                        android:textAlignment="center"
+                        app:layout_constraintBottom_toBottomOf="@+id/food_name"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toEndOf="@+id/food_name"
+                        app:layout_constraintTop_toTopOf="@+id/food_name"
+                        app:layout_constraintVertical_bias="0.0"
+                        tools:ignore="TouchTargetSizeCheck" />
+
+                    <TextView
+                        android:id="@+id/serving_size"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="28dp"
+                        android:layout_weight="1"
+                        android:background="@color/box"
+                        android:paddingLeft="10dp"
+                        android:paddingTop="3dp"
+                        android:paddingBottom="3dp"
+                        android:text="Serving Size(Cups)"
+                        android:textColor="@color/text_view"
+                        android:textSize="20sp"
+                        app:layout_constraintEnd_toEndOf="@+id/food_name"
+                        app:layout_constraintHorizontal_bias="0.0"
+                        app:layout_constraintStart_toStartOf="@+id/food_name"
+                        app:layout_constraintTop_toBottomOf="@+id/food_name" />
+
+
+                    <Spinner
+                        android:id="@+id/spinner_serving_size"
+                        android:layout_width="95dp"
+                        android:layout_height="32dp"
                         android:background="@drawable/rectangle_shape"
                         android:entries="@array/serving_size"
                         android:minHeight="48dp"
                         android:textAlignment="center"
                         app:layout_constraintBottom_toBottomOf="@+id/serving_size"
-                        app:layout_constraintEnd_toEndOf="parent"
-                        app:layout_constraintHorizontal_bias="0.907"
-                        app:layout_constraintStart_toEndOf="@+id/serving_size"
+                        app:layout_constraintEnd_toEndOf="@+id/spinner_food_name"
+                        app:layout_constraintStart_toStartOf="@+id/spinner_food_name"
                         app:layout_constraintTop_toTopOf="@+id/serving_size"
-                        app:layout_constraintVertical_bias="0.0"
                         tools:ignore="TouchTargetSizeCheck" />
-
 
                     <TextView
                         android:id="@+id/time"
@@ -207,6 +210,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="28dp"
+                        android:layout_marginBottom="20dp"
                         android:layout_weight="1"
                         android:background="@color/box"
                         android:paddingLeft="10dp"
@@ -215,6 +219,7 @@
                         android:text="Meal"
                         android:textColor="@color/text_view"
                         android:textSize="20sp"
+                        app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintEnd_toEndOf="@+id/time"
                         app:layout_constraintHorizontal_bias="0.0"
                         app:layout_constraintStart_toStartOf="@+id/time"

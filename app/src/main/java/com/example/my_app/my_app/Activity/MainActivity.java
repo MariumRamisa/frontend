@@ -2,13 +2,16 @@ package com.example.my_app.my_app.Activity;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.appcompat.widget.SearchView;
 
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.EditText;
+import android.widget.ImageView;
 import android.widget.ProgressBar;
+import android.widget.SearchView;
+import android.widget.TextView;
 
 import com.example.my_app.R;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
@@ -20,6 +23,13 @@ import java.util.TimerTask;
 
 public class MainActivity extends AppCompatActivity  {
 
+    ShapeableImageView profile_image;
+    ImageView exercise_image;
+    TextView txtview_goalcalorie;
+    TextView txtview_foodcalorie;
+    TextView txtview_exercisecalorie;
+    TextView text_cal;
+    SearchView searchView;
 
     ProgressBar pb;
     int counter=0;
@@ -29,8 +39,16 @@ public class MainActivity extends AppCompatActivity  {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        SearchView searchView=findViewById(R.id.search_view);
+        profile_image=findViewById(R.id.shapeableImageView);
+        exercise_image=findViewById(R.id.exercise_image);
+        txtview_goalcalorie=findViewById(R.id.txtview_goalcalorie);
+        txtview_foodcalorie=findViewById(R.id.txtview_foodcalorie);
+        txtview_exercisecalorie=findViewById(R.id.txtview_exercisecalorie);
+        text_cal=findViewById(R.id.text_cal);
+
+        searchView=findViewById(R.id.search_view);
         searchView.clearFocus();
+
         BottomNavigationView navigationView=findViewById(R.id.bottomNavigationView);
         navigationView.setSelectedItemId(R.id.dashboard);
         navigationView.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
@@ -62,9 +80,14 @@ public class MainActivity extends AppCompatActivity  {
             }
         });
 
+        exercise_image.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(getApplicationContext(),ExerciseActivity.class));
+            }
+        });
+//image
 
-
-        ShapeableImageView profile_image=findViewById(R.id.shapeableImageView);
 
         profile_image.setOnClickListener(new View.OnClickListener() {
             @Override
