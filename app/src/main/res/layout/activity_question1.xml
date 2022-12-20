@@ -113,7 +113,7 @@
             android:layout_marginTop="30dp"
             android:background="@drawable/rectangle_shape"
             android:paddingTop="5dp"
-            android:text="Maintain Weight"
+            android:text="Gain Weight"
             android:textColor="@color/text_view"
             android:textSize="20sp"
             app:layout_constraintEnd_toEndOf="@+id/txt_maintain"
