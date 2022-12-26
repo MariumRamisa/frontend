@@ -4,36 +4,24 @@ import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
 
 public class User {
-    @SerializedName("id")
-    @Expose
-    private Integer id;
-    @SerializedName("name")
-    @Expose
-    private String name;
-    @SerializedName("email")
-    @Expose
-    private String email;
-    @SerializedName("password")
-    @Expose
-    private String password;
-
+    int id;
+    String name,email,password;
 
     public User() {
     }
 
-    public User(Integer id, String name, String email, String password) {
-        super();
+    public User(int id, String name, String email, String password) {
         this.id = id;
         this.name = name;
         this.email = email;
         this.password = password;
     }
 
-    public Integer getId() {
+    public int getId() {
         return id;
     }
 
-    public void setId(Integer id) {
+    public void setId(int id) {
         this.id = id;
     }
 
@@ -60,6 +48,4 @@ public class User {
     public void setPassword(String password) {
         this.password = password;
     }
-
 }
-

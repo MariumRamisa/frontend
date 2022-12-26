@@ -173,37 +173,6 @@
                         app:layout_constraintTop_toTopOf="@+id/serving_size"
                         tools:ignore="TouchTargetSizeCheck" />
 
-                    <TextView
-                        android:id="@+id/time"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="28dp"
-                        android:layout_weight="1"
-                        android:background="@color/box"
-                        android:paddingLeft="10dp"
-                        android:paddingTop="3dp"
-                        android:paddingBottom="3dp"
-                        android:text="Time"
-                        android:textColor="@color/text_view"
-                        android:textSize="20sp"
-                        app:layout_constraintEnd_toEndOf="@+id/serving_size"
-                        app:layout_constraintHorizontal_bias="0.0"
-                        app:layout_constraintStart_toStartOf="@+id/serving_size"
-                        app:layout_constraintTop_toBottomOf="@+id/serving_size" />
-
-                    <EditText
-                        android:id="@+id/editTextDate"
-                        android:layout_width="93dp"
-                        android:layout_height="32dp"
-                        android:background="@drawable/rectangle_shape"
-                        android:ems="5"
-                        android:inputType="date"
-                        android:minHeight="48dp"
-                        app:layout_constraintBottom_toBottomOf="@+id/time"
-                        app:layout_constraintEnd_toEndOf="@+id/spinner_serving_size"
-                        app:layout_constraintStart_toStartOf="@+id/spinner_serving_size"
-                        app:layout_constraintTop_toTopOf="@+id/time"
-                        app:layout_constraintVertical_bias="1.0" />
 
                     <TextView
                         android:id="@+id/meal"
@@ -220,10 +189,10 @@
                         android:textColor="@color/text_view"
                         android:textSize="20sp"
                         app:layout_constraintBottom_toBottomOf="parent"
-                        app:layout_constraintEnd_toEndOf="@+id/time"
+                        app:layout_constraintEnd_toEndOf="@+id/serving_size"
                         app:layout_constraintHorizontal_bias="0.0"
-                        app:layout_constraintStart_toStartOf="@+id/time"
-                        app:layout_constraintTop_toBottomOf="@+id/time" />
+                        app:layout_constraintStart_toStartOf="@+id/serving_size"
+                        app:layout_constraintTop_toBottomOf="@+id/serving_size" />
 
                     <Spinner
                         android:id="@+id/spinner_meal"
@@ -235,8 +204,8 @@
                         android:textAlignment="center"
                         android:textColor="@color/white"
                         app:layout_constraintBottom_toBottomOf="@+id/meal"
-                        app:layout_constraintEnd_toEndOf="@+id/editTextDate"
-                        app:layout_constraintStart_toStartOf="@+id/editTextDate"
+                        app:layout_constraintEnd_toEndOf="@+id/spinner_serving_size"
+                        app:layout_constraintStart_toStartOf="@+id/spinner_serving_size"
                         app:layout_constraintTop_toTopOf="@+id/meal"
                         app:layout_constraintVertical_bias="1.0" />
 

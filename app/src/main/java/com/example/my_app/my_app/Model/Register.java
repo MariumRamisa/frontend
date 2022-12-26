@@ -5,68 +5,31 @@ import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
 
 public class Register {
-    @SerializedName("username")
-    @Expose
-    private String username;
-    @SerializedName("email")
-    @Expose
-    private String email;
-    @SerializedName("password")
-    @Expose
-    private String password;
-    @SerializedName("password2")
-    @Expose
-    private String password2;
+    User user;
+    String message;
+
 
     public Register() {
     }
 
-    public Register(String username, String email, String password, String password2) {
-        this.username = username;
-        this.email = email;
-        this.password = password;
-        this.password2 = password2;
+    public Register(User user, String message) {
+        this.user = user;
+        this.message = message;
     }
 
-    public String getUsername() {
-        return username;
+    public User getUser() {
+        return user;
     }
 
-    public void setUsername(String username) {
-        this.username = username;
+    public void setUser(User user) {
+        this.user = user;
     }
 
-    public String getEmail() {
-        return email;
+    public String getMessage() {
+        return message;
     }
 
-    public void setEmail(String email) {
-        this.email = email;
-    }
-
-    public String getPassword() {
-        return password;
-    }
-
-    public void setPassword(String password) {
-        this.password = password;
-    }
-
-    public String getPassword2() {
-        return password2;
-    }
-
-    public void setPassword2(String password2) {
-        this.password2 = password2;
-    }
-
-    @Override
-    public String toString() {
-        return "Register{" +
-                "username='" + username + '\'' +
-                ", email='" + email + '\'' +
-                ", password='" + password + '\'' +
-                ", password2='" + password2 + '\'' +
-                '}';
+    public void setMessage(String message) {
+        this.message = message;
     }
 }

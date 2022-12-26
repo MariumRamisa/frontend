@@ -1,35 +1,32 @@
+package com.example.my_app.my_app.Model;
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
 
 public class Login {
-    @SerializedName("email")
-    @Expose
-    private String email;
-    @SerializedName("password")
-    @Expose
-    private String password;
+   User user;
+   String message;
 
     public Login() {
     }
 
-    public Login(String email, String password) {
-        this.email = email;
-        this.password = password;
+    public Login(User user, String message) {
+        this.user = user;
+        this.message = message;
     }
 
-    public String getEmail() {
-        return email;
+    public User getUser() {
+        return user;
     }
 
-    public void setEmail(String email) {
-        this.email = email;
+    public void setUser(User user) {
+        this.user = user;
     }
 
-    public String getPassword() {
-        return password;
+    public String getMessage() {
+        return message;
     }
 
-    public void setPassword(String password) {
-        this.password = password;
+    public void setMessage(String message) {
+        this.message = message;
     }
 }

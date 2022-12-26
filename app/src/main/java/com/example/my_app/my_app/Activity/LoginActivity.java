@@ -13,6 +13,7 @@ import android.widget.Toast;
 
 import com.example.my_app.R;
 //import com.example.my_app.my_app.Model.Login;
+import com.example.my_app.my_app.Model.Login;
 import com.example.my_app.my_app.RetrofitClient;
 
 import retrofit2.Call;
@@ -84,23 +85,27 @@ public class LoginActivity extends AppCompatActivity  {
                     password.setError("Password must be minimum 8 characters");
                     return;
                 }
-/*
+
                 Call<Login> call = RetrofitClient.getInstance().getApi().login(userEmail,userPassword);
                 call.enqueue(new Callback<Login>() {
                     @Override
                     public void onResponse(Call<Login> call, Response<Login> response) {
                         Login loginResponse=response.body();
                         if (response.isSuccessful()){
-                            Toast.makeText(LoginActivity.this, "Login Successful", Toast.LENGTH_SHORT).show();
+                            Toast.makeText(LoginActivity.this, loginResponse.getMessage(), Toast.LENGTH_SHORT).show();
                             startActivity(new Intent(getApplicationContext(), MainActivity.class));
                         }
+                        else {
+                            Toast.makeText(LoginActivity.this,loginResponse.getMessage(), Toast.LENGTH_SHORT).show();
+                        }
+
                     }
 
                     @Override
                     public void onFailure(Call<Login> call, Throwable t) {
                         Toast.makeText(LoginActivity.this, "t.getMessage()", Toast.LENGTH_SHORT).show();
                     }
-                });*/
+                });
             }
         });
     }

@@ -10,6 +10,6 @@
     <color name="background">#181a26</color>
     <color name="box">#242833</color>
     <color name="blue">#4373fa</color>
-    <color name="edit_text">#FF6200EE</color>
+    <color name="edit_text">#ADADF8</color>
     <color name="text_view">#FFFFFF</color>
 </resources>

@@ -19,7 +19,6 @@ public class AddFood extends AppCompatActivity implements AdapterView.OnItemSele
     ImageView arrow;
     Spinner food_name;
     Spinner servingSize;
-    EditText Time;
     Spinner meal;
 
     @Override
@@ -31,7 +30,6 @@ public class AddFood extends AppCompatActivity implements AdapterView.OnItemSele
         arrow=findViewById(R.id.arrow);
         food_name=findViewById(R.id.spinner_food_name);
         servingSize=findViewById(R.id.spinner_serving_size);
-        Time=findViewById(R.id.editTextDate);
         meal=findViewById(R.id.spinner_meal);
 
         arrow.setOnClickListener(new View.OnClickListener() {

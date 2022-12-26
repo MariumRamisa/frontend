@@ -99,23 +99,22 @@ public class RegisterActivity extends AppCompatActivity {
                     return;
                 }
 
-               Register registerUser=new Register(userName,userEmail,userPassword,userPassword2);
-               Call<ResponseBody> callRegister = RetrofitClient.getInstance().getApi().register(registerUser);
-                callRegister.enqueue((new Callback<ResponseBody>() {
+               Call<Register> callRegister = RetrofitClient.getInstance().getApi().register(userName,userEmail,userPassword);
+                callRegister.enqueue((new Callback<Register>() {
                     @Override
-                    public void onResponse(Call<ResponseBody> call, Response<ResponseBody> response) {
-                        ResponseBody registerResponse =response.body();
+                    public void onResponse(Call<Register> call, Response<Register> response) {
+                        Register registerResponse =response.body();
                        if(response.isSuccessful()){
-                           Toast.makeText(RegisterActivity.this, "Registration Successfully", Toast.LENGTH_SHORT).show();
+                           Toast.makeText(RegisterActivity.this, registerResponse.getMessage(), Toast.LENGTH_SHORT).show();
                            startActivity(new Intent(getApplicationContext(), question_1.class));
                        }
                        else {
-                           Toast.makeText(RegisterActivity.this,"Registration unsuccessful", Toast.LENGTH_SHORT).show();
+                           Toast.makeText(RegisterActivity.this,registerResponse.getMessage(), Toast.LENGTH_SHORT).show();
                        }
                     }
 
                     @Override
-                    public void onFailure(Call<ResponseBody> call, Throwable t) {
+                    public void onFailure(Call<Register> call, Throwable t) {
                         Toast.makeText(RegisterActivity.this, "t.getMessage()", Toast.LENGTH_SHORT).show();
                     }
 
