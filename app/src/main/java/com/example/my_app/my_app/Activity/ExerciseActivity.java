@@ -14,7 +14,7 @@ import android.widget.Toast;
 import com.example.my_app.R;
 
 public class ExerciseActivity extends AppCompatActivity implements AdapterView.OnItemSelectedListener{
-
+    // declaring variables
     ImageView save;
     ImageView back_arrow;
     Spinner exercise_name;
@@ -24,26 +24,26 @@ public class ExerciseActivity extends AppCompatActivity implements AdapterView.O
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_exercise);
-
+        // assigning variable id from xml file
         save=findViewById(R.id.save);
         back_arrow=findViewById(R.id.arrow);
         exercise_name=findViewById(R.id.spinner_exercise_name);
         exercise_quantity=findViewById(R.id.spinner_amount);
-
+        // adding action to the arrow button
         back_arrow.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 startActivity(new Intent(getApplicationContext(),MainActivity.class));
             }
         });
-
+        // adding action to the save button
         save.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
 
             }
         });
-
+        // adding action to the spinner
         ArrayAdapter exercise_name_adapter=ArrayAdapter.createFromResource(this,R.array.exercise,R.layout.spinner_background);
         exercise_name.setAdapter(exercise_name_adapter);
         exercise_name.setOnItemSelectedListener(this);

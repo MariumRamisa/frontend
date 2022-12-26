@@ -15,6 +15,8 @@ import com.example.my_app.R;
 
 public class AddFood extends AppCompatActivity implements AdapterView.OnItemSelectedListener{
 
+    // declaring variables
+
     ImageView save;
     ImageView arrow;
     Spinner food_name;
@@ -26,11 +28,15 @@ public class AddFood extends AppCompatActivity implements AdapterView.OnItemSele
         super.onCreate(savedInstanceState);
         setContentView(R.layout.add_food);
 
+        // assigning variable id from xml file
+
         save=findViewById(R.id.save);
         arrow=findViewById(R.id.arrow);
         food_name=findViewById(R.id.spinner_food_name);
         servingSize=findViewById(R.id.spinner_serving_size);
         meal=findViewById(R.id.spinner_meal);
+
+        // adding action to the arrow button
 
         arrow.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -38,12 +44,15 @@ public class AddFood extends AppCompatActivity implements AdapterView.OnItemSele
                 startActivity(new Intent(getApplicationContext(), DiaryActivity.class));
             }
         });
+        // adding action to the save button
         save.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 startActivity(new Intent(getApplicationContext(), DiaryActivity.class));
             }
         });
+
+        // adding action to the spinner
 
         ArrayAdapter food_name_adapter=ArrayAdapter.createFromResource(this,R.array.food,R.layout.spinner_background);
         food_name.setAdapter(food_name_adapter);

@@ -19,9 +19,12 @@ public class Goal_edit extends AppCompatActivity implements AdapterView.OnItemSe
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_goal_edit);
+//buttons
 
         ImageView back_arrow=findViewById(R.id.arrow);
         ImageView save_btn=findViewById(R.id.save);
+
+//spinner
 
         Spinner starting_goal=findViewById(R.id.starting_weight_edit);
         ArrayAdapter starting_goal_adapter=ArrayAdapter.createFromResource(this,R.array.weight,R.layout.spinner_background);

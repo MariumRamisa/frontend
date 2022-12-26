@@ -98,7 +98,7 @@ public class RegisterActivity extends AppCompatActivity {
                     password2.setError("Password doesnt match");
                     return;
                 }
-
+//connecting with backend
                Call<Register> callRegister = RetrofitClient.getInstance().getApi().register(userName,userEmail,userPassword);
                 callRegister.enqueue((new Callback<Register>() {
                     @Override

@@ -85,6 +85,7 @@ public class LoginActivity extends AppCompatActivity  {
                     password.setError("Password must be minimum 8 characters");
                     return;
                 }
+// sending and getting response
 
                 Call<Login> call = RetrofitClient.getInstance().getApi().login(userEmail,userPassword);
                 call.enqueue(new Callback<Login>() {

@@ -46,7 +46,7 @@ public class MainActivity extends AppCompatActivity  {
         text_cal=findViewById(R.id.text_cal);
         /*searchView=findViewById(R.id.search_view);
         searchView.clearFocus();*/
-
+//bottom navigation
         BottomNavigationView navigationView=findViewById(R.id.bottomNavigationView);
         navigationView.setSelectedItemId(R.id.dashboard);
         navigationView.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {

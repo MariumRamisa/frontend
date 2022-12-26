@@ -29,7 +29,7 @@ public class PlanActivity extends AppCompatActivity {
             }
         });
 
-
+//bottom navigation
         BottomNavigationView navigationView=findViewById(R.id.bottomNavigationView);
         navigationView.setSelectedItemId(R.id.diary);
         navigationView.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
